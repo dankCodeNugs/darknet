@@ -336,6 +336,12 @@ msbuild.exe /property:Platform=x64;Configuration=Release PACKAGE.vcxproj
 ```
 
 > [!TIP]
+> ONNX export is currently disabled by default on Windows until the protobuf/CUDA isolation work is finished.  To opt in explicitly, run:
+> ```bat
+> cmake -DCMAKE_BUILD_TYPE=Release -DDARKNET_TRY_ONNX=ON -DCMAKE_TOOLCHAIN_FILE=C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake ..
+> ```
+
+> [!TIP]
 > Note that the output of the `cmake` command is a normal Visual Studio solution file, `darknet.sln`.  If you are a software developer who regularly uses the Visual Studio GUI instead of `msbuild.exe` to build projects, you can ignore the command-line and load the Darknet project in Visual Studio.
 
 You should now have this file you can run:  `C:\src\Darknet\build\src-cli\Release\darknet.exe`.  Run this to test:  `C:\src\Darknet\build\src-cli\Release\darknet.exe --version`.
