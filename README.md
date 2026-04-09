@@ -336,9 +336,9 @@ msbuild.exe /property:Platform=x64;Configuration=Release PACKAGE.vcxproj
 ```
 
 > [!TIP]
-> ONNX export is currently disabled by default on Windows until the protobuf/CUDA isolation work is finished.  To opt in explicitly, run:
+> ONNX export is enabled by default on Windows.  To disable it explicitly, run:
 > ```bat
-> cmake -DCMAKE_BUILD_TYPE=Release -DDARKNET_TRY_ONNX=ON -DCMAKE_TOOLCHAIN_FILE=C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake ..
+> cmake -DCMAKE_BUILD_TYPE=Release -DDARKNET_TRY_ONNX=OFF -DCMAKE_TOOLCHAIN_FILE=C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake ..
 > ```
 
 > [!TIP]
