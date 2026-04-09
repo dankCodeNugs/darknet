@@ -329,18 +329,6 @@ void Darknet::show_version_info()
 		#endif
 	#endif
 
-	#if DARKNET_HAS_PROTOBUF
-		// 3021012 = "3.21.12"
-		const int pb_major = (GOOGLE_PROTOBUF_VERSION / 1000000	) % 1000;	// 3
-		const int pb_minor = (GOOGLE_PROTOBUF_VERSION / 1000	) % 1000;	// 21
-		const int pb_patch = (GOOGLE_PROTOBUF_VERSION / 1		) % 1000;	// 12
-		const std::string pb_ver =
-			std::to_string(pb_major) + "." +
-			std::to_string(pb_minor) + "." +
-			std::to_string(pb_patch);
-		*cfg_and_state.output << "Protobuf " << Darknet::in_colour(Darknet::EColour::kBrightWhite, pb_ver) << ", ";
-	#endif
-
 	*cfg_and_state.output << "OpenCV " << Darknet::in_colour(Darknet::EColour::kBrightWhite, CV_VERSION);
 
 
