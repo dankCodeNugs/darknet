@@ -11,7 +11,8 @@
  * Class used to create and manipulate ONNX nodes.
  */
 
-#include "darknet_onnx_internal.hpp"
+#include "darknet_internal.hpp"
+#include "onnx.proto3.pb.h"
 
 
 namespace Darknet

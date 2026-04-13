@@ -152,7 +152,7 @@ INCLUDE_DIRECTORIES (src-other)
 
 IF (DARKNET_TRY_ONNX)
 	IF (Protobuf_FOUND)
-		ADD_SUBDIRECTORY	(src-onnx)
+		ADD_SUBDIRECTORY (src-onnx)
 	ENDIF ()
 ENDIF ()
 

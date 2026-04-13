@@ -11,7 +11,8 @@
  * Class used to convert the Darknet .cfg and .weights file to a .onnx file.
  */
 
-#include "darknet_onnx_internal.hpp"
+#include "darknet_internal.hpp"
+#include "onnx.proto3.pb.h"
 
 
 namespace Darknet
